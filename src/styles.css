@@ -106,3 +106,17 @@ main,.ticker,.editorial-progress,.footer{margin-left:205px}
 @media(max-width:800px){.hero,.hero-inner.container{min-height:0}.hero-inner.container{padding:105px 24px 0}.hero-topline{top:88px;left:24px;right:24px}.hero-editorial{min-height:0;display:flex;flex-direction:column}.hero-editorial-copy{width:100%;padding:45px 0 20px}.hero h1.hero-name{font-size:clamp(50px,10vw,83px)}.hero-editorial-portrait{position:relative;width:100%;height:440px;margin-top:15px}.hero-portrait-frame:after{background:linear-gradient(0deg,#0d0c0a,transparent 32%)}.hero-foot{padding:10px 0 24px}.hero-quote{font-size:23px}}
 @media(max-width:440px){.hero h1.hero-name{font-size:clamp(42px,10.5vw,57px)}.hero-role-label{letter-spacing:2px}.hero-editorial-portrait{height:360px}.hero-editorial-copy{padding-top:35px}.hero-description{font-size:13px}}
 @media(prefers-reduced-motion:reduce){.hero-portrait-frame img{transition:none}}
+
+/* V8 — complete project gallery */
+.project-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:44px 26px}
+.project-card:first-child,.project-card:nth-child(2){display:block;grid-column:auto}
+.project-card:nth-child(2) .project-image,.project-card:nth-child(2) .project-meta{order:initial}
+.project-card .project-image,.project-card:first-child .project-image{min-height:320px;height:330px;background:#1a1c1b;border:1px solid #5d5040}
+.project-card .project-meta,.project-card:first-child .project-meta{padding:24px 4px 10px}
+.project-card .project-meta h3{font-size:clamp(27px,3vw,43px)}
+.project-screenshot{width:100%;height:100%;position:relative;overflow:hidden}
+.project-screenshot img{display:block;width:100%;height:100%;object-fit:contain;background:#161616;transition:transform .45s ease}
+.project-3 .project-screenshot img{object-fit:contain}
+.project-4 .project-screenshot img{object-fit:contain;background:#ddd}
+.project-card:hover .project-screenshot img{transform:scale(1.035)}
+@media(max-width:760px){.project-list{grid-template-columns:1fr;gap:32px}.project-card:first-child,.project-card:nth-child(2){display:block}.project-card .project-image,.project-card:first-child .project-image{height:300px;min-height:300px}}
